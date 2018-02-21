@@ -39,7 +39,7 @@ namespace EjemploLab1.Controllers
         //
         // POST: /Persona/Create
         [HttpPost]
-        public ActionResult Create([Bind(Include = "PersonaID,Nombre,Apellido,Edad")] Persona persona)
+        public ActionResult Create([Bind(Include = "PersonaID,Nombre,Apellido,Edad,Posicion,Club,Salario")] Persona persona)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace EjemploLab1.Controllers
         // POST: /Persona/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="PersonaID,Nombre,Apellido,Edad")]Persona persona)
+        public ActionResult Edit([Bind(Include = "PersonaID,Nombre,Apellido,Edad,Posicion,Club,Salario")]Persona persona)
         {
             try
             {

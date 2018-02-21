@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EjemploLab1.DBContext;
 
 namespace EjemploLab1.Controllers
 {
     public class CVSController : Controller
     {
+        DefaultConnection db = DefaultConnection.getInstance;
+
         // GET: CVS
         public ActionResult Index()
         {
-            return View();
+            return View(db.Personas.ToList());
         }
 
         // GET: CVS/Details/5
@@ -77,7 +80,6 @@ namespace EjemploLab1.Controllers
             try
             {
                 // TODO: Add delete logic here
-
                 return RedirectToAction("Index");
             }
             catch
