@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Persona</h4>
         <hr />
@@ -42,6 +42,30 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.Club, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Club)
+                @Html.ValidationMessageFor(model => model.Club)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Posicion, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Posicion)
+                @Html.ValidationMessageFor(model => model.Posicion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Salario, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Salario)
+                @Html.ValidationMessageFor(model => model.Salario)
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
@@ -52,7 +76,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

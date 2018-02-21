@@ -87,6 +87,9 @@ namespace EjemploLab1.Controllers
                 personaBuscada.Nombre = persona.Nombre;
                 personaBuscada.Apellido = persona.Apellido;
                 personaBuscada.Edad = persona.Edad;
+                personaBuscada.Club = persona.Club;
+                personaBuscada.Posicion = persona.Posicion;
+                personaBuscada.Salario = persona.Salario;
 
                 return RedirectToAction("Index");
             }

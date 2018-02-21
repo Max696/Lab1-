@@ -14,5 +14,11 @@ namespace EjemploLab1.Models
         public string Apellido { get; set; }
 
         public int Edad { get; set; }
+
+        public string Club { get; set; }
+
+        public string Posicion { get; set; }
+
+        public double Salario { get; set; }
     }
 }
