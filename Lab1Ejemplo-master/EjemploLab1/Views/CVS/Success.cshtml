@@ -1,0 +1,78 @@
+﻿@using EjemploLab1.Controllers;
+@using EjemploLab1.Models;
+
+@{
+    ViewBag.Title = "Success";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Succes</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 12pt;
+        }
+
+        h1 {
+            align-content: center;
+        }
+
+        h2 {
+            background: white;
+        }
+
+        table {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            background-color: #808080;
+        }
+
+            table th {
+                background-color: #ea1313;
+                color: #ffffff;
+            }
+
+            table th, table td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            table, table td {
+                border: 0px solid #ccc;
+            }
+    </style>
+</head>
+<body>
+    <h2>Lista de Jugadores</h2>
+    <h1> Jugadores</h1>
+    @using (Html.BeginForm("Succes", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="excelFile" />
+        <input type="submit" value="Import" />
+    }
+    <hr />
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Club</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Posicion</th>
+            <th>Salario BAse </th>
+            <th> Compensacion </th>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <th>@p.Club</th>
+                <th>@p.Apellido</th>
+                <th>@p.Nombre</th>
+                <th>@p.Posicion</th>
+                <th>@p.Salario</th>
+               
+            </tr>
+        }
+    </table>
+</body>
+</html>

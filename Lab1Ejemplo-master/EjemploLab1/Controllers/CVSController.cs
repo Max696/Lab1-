@@ -17,8 +17,8 @@ namespace EjemploLab1.Controllers
         // GET: CVS
         public ActionResult Index()
         {
-           
-            return View(db.Personas.ToList());
+
+            return RedirectToAction("CreatePerson");
         }
 
         // GET: CVS/Details/5
@@ -28,7 +28,8 @@ namespace EjemploLab1.Controllers
         }
 
         // GET: CVS/Create
-        public ActionResult Create()
+        [HttpGet]
+        public ActionResult CreatePerson()
         {
             return View();
         }
@@ -79,7 +80,7 @@ namespace EjemploLab1.Controllers
                         
                     }
                 }
-               return View(db.Personas);
+                return View(db.Personas);
             }
             catch
             {

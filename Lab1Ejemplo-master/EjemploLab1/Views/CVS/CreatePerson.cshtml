@@ -1,0 +1,24 @@
+﻿@model EjemploLab1.Models.Persona
+
+@{
+    ViewBag.Title = "CreatePerson";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FileImport</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create", "CVS", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Raw(ViewBag.Error)
+        <span>Excel File</span><input type="file" name="excelfile" />
+        <br />
+        <input type="submit" value="Import" />
+    }
+</body>
+</html>
+

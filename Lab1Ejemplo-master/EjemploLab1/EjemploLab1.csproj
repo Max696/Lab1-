@@ -161,6 +161,8 @@
     <Content Include="Views\CVS\Index.cshtml" />
     <Content Include="Views\CVS\Edit.cshtml" />
     <Content Include="Views\CVS\Create.cshtml" />
+    <Content Include="Views\CVS\Success.cshtml" />
+    <Content Include="Views\CVS\CreatePerson.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
