@@ -1,7 +1,31 @@
-﻿
+﻿@model List<EjemploLab1.Models.Persona>
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
+<body>
+    <h1> Jugadores</h1>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Club</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Posicion</th>
+            <th>Salario BAse </th>
+            <th> Compensacion </th>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <th>@p.Club</th>
+                <th>@p.Apellido</th>
+                <th>@p.Nombre</th>
+                <th>@p.Posicion</th>
+                <th>@p.Salario</th>
+               
+            </tr>
+        }
+    </table>
+</body>
 
