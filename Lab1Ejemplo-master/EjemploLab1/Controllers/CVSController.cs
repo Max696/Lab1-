@@ -17,7 +17,7 @@ namespace EjemploLab1.Controllers
         // GET: CVS
         public ActionResult Index()
         {
-            Session["Lista"] = Session["Lista"] ?? db.Personas;
+           
             return View(db.Personas.ToList());
         }
 
